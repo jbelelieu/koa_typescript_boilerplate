@@ -1,7 +1,7 @@
 {
   "name": "koa_typescript_boilerplate",
   "version": "0.0.1",
-  "description": "Boilterplate code for a TypeScript/Koa web API.",
+  "description": "Boilterplate code for a TypeScript/Koa web API with TSLint, Jest, and Dotenv.",
   "engineStrict": true,
   "engines": {
     "node": ">= 10.13 <11"
