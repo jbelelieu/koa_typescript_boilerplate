@@ -1,6 +1,6 @@
 # Koa/TypeScript Boilerplate Web API
 
-Boilerplate code for a Koa Web API with TypeScript, Jest, TSLint, and Dotenv.
+Boilerplate code with Docker support for a Koa Web API with TypeScript, Jest, TSLint, and Dotenv.
 
 ### Local .env
 
