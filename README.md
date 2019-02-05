@@ -21,3 +21,9 @@ Clone the repo then run:
 `npm start`
 
 The server is accessible at http://localhost:4000/
+
+## Docker
+
+`docker build -t boilerplate-typescript-koa .`
+
+`docker run -p 8080:4000 boilerplate-typescript-koa`
