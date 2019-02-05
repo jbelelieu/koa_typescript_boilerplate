@@ -27,3 +27,5 @@ The server is accessible at http://localhost:4000/
 `docker build -t boilerplate-typescript-koa .`
 
 `docker run -p 8080:4000 boilerplate-typescript-koa`
+
+The server is accessible at http://localhost:8080/
