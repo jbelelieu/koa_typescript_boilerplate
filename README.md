@@ -22,6 +22,15 @@ Clone the repo then run:
 
 The server is accessible at http://localhost:4000/
 
+### Commented Code
+
+The boilerplate comes with some ready-to-use code that is commented out by default. You can uncomment and adjust accordingly within your `src/index.ts` file. That code includes:
+
+- CORS Considerations
+- JWT Validation
+- Rate Limiting
+
+
 ## Docker
 
 `docker build -t boilerplate-typescript-koa .`
