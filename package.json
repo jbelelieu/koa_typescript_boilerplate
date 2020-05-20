@@ -17,6 +17,7 @@
     "rimraf": "~2.6.2",
     "supertest": "^3.3.0",
     "ts-jest": "~23.10.5",
+    "tslib": "~1.9.3",
     "tslint": "~5.11.0",
     "tslint-config-prettier": "1.16.0",
     "tslint-microsoft-contrib": "~5.2.1",
@@ -36,11 +37,12 @@
   "author": "Jon Belelieu <jonnyobell@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@koa/cors": "^3.1.0",
     "koa": "^2.6.2",
     "koa-bodyparser": "^4.2.1",
     "koa-jwt": "^3.5.1",
     "koa-logger": "^3.2.0",
-    "koa-router": "^7.4.0",
-    "tslib": "~1.9.3"
+    "koa-ratelimit": "^4.2.1",
+    "koa-router": "^7.4.0"
   }
 }
