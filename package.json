@@ -22,7 +22,7 @@
     "tslint-config-prettier": "1.16.0",
     "tslint-microsoft-contrib": "~5.2.1",
     "tsutils": "~3.5.0",
-    "typescript": "~3.1.6"
+    "typescript": "^3.1.6"
   },
   "scripts": {
     "clean": "rimraf coverage build tmp",
