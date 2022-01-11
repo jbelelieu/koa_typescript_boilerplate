@@ -1,10 +1,10 @@
 {
-  "name": "koa_typescript_boilerplate",
+  "name": "taco_haus",
   "version": "0.0.1",
-  "description": "Boilterplate code for a TypeScript/Koa web API with TSLint, Jest, and Dotenv.",
+  "description": "Taco.Haus API",
   "engineStrict": true,
   "engines": {
-    "node": ">= 10.13 <11"
+    "node": ">= 15"
   },
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
@@ -34,10 +34,11 @@
     "postinstall": "npm run build",
     "start": "node -r dotenv/config build/src/index.js"
   },
-  "author": "Jon Belelieu <jonnyobell@gmail.com>",
+  "author": "Taco Haus (tacohaus@pm.me)",
   "license": "MIT",
   "dependencies": {
     "@koa/cors": "^3.1.0",
+    "ethers": "^5.5.3",
     "koa": "^2.6.2",
     "koa-bodyparser": "^4.2.1",
     "koa-jwt": "^3.5.1",
