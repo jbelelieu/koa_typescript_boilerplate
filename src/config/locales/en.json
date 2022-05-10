@@ -1,0 +1,6 @@
+{
+    "S0001": "Success!",
+    "E0001": "As error has occurred.",
+    "E0002": "Invalid API key submitted.",
+    "E0003": "Invalid credentials."
+}

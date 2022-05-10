@@ -4,7 +4,7 @@ Boilerplate code with Docker support for a Koa Web API with TypeScript, Jest, TS
 
 ### Local .env
 
-Environment configuration is controlled via the "dotenv" package. As such, you will need to create a `.env` file for your local environment. Please contact a project admin for the most up-to-date local environment file.
+Environment configuration is controlled via the "dotenv" package. As such, you will need to create a `.env` file for your local environment.
 
 ## Build Instructions
 
@@ -24,12 +24,13 @@ The server is accessible at http://localhost:4000/
 
 ### Commented Code
 
+Search the project files for "TODO:" to find a list of items you can change.
+
 The boilerplate comes with some ready-to-use code that is commented out by default. You can uncomment and adjust accordingly within your `src/index.ts` file. That code includes:
 
 - CORS Considerations
 - JWT Validation
 - Rate Limiting
-
 
 ## Docker
 

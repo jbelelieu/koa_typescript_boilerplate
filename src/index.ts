@@ -3,12 +3,13 @@ import * as Koa from 'koa';
 import * as bodyParser from 'koa-bodyparser';
 import * as logger from 'koa-logger';
 // import * as ratelimit from 'koa-ratelimit';
-import { router } from './router/routes';
+import { publicRouter } from './router/publicRoutes';
+import { secureRouter } from './router/secureRoutes';
 // import * as jwt from 'koa-jwt';
 
 const app = new Koa();
 
-// Rate limiting
+// TODO: Rate limiting
 // Set to a maximum of 700 requests per IP every 30 seconds.
 /*
 app.use(ratelimit({
@@ -42,11 +43,14 @@ if (process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'production') {
 // 	'Access-Control-Allow-Methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS',
 // }));
 
-// JWT Security
+// TODO: Public Routes
+// app.use(publicRouter.routes()).use(publicRouter.allowedMethods());
+
+// TODO: JWT Security
 // app.use(jwt({ secret: process.env.JWT_SECRET }));
 
-// Routes
-app.use(router.routes()).use(router.allowedMethods());
+// TODO: JWT-Secured Routes
+// app.use(secureRouter.routes()).use(secureRouter.allowedMethods());
 
 // Start the server
 export const server = app.listen(process.env.PORT || 4000);
