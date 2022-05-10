@@ -2,9 +2,9 @@
 
 Boilerplate code with Docker support for a Koa Web API with TypeScript, Jest, TSLint, and Dotenv.
 
-### Local .env
+### Update `.env` File
 
-Environment configuration is controlled via the "dotenv" package. As such, you will need to create a `.env` file for your local environment.
+Environment configuration is controlled via the "dotenv" package. As such, you will need to (1) rename `.sample.env` to `.env` and (2) update the values on that file.
 
 ## Build Instructions
 
@@ -21,6 +21,31 @@ Clone the repo then run:
 `npm start`
 
 The server is accessible at http://localhost:4000/
+
+### Code Guidelines
+
+- Routes 
+  - Send request to controllers
+- Controllers:
+  - Validate input
+  - Call services and/or routines (business logic operations)
+    - No business logic in controllers (use services/routines)!
+  - Respond via Koa's context
+  - Catch any errors thrown by services/routines
+- Services
+  - Any business logic that is required to complete an operation
+  - Use models, other services, routines
+  - Throw exceptions
+- Routines
+  - Use models, services, other routines
+  - Fail on any DB transaction failure
+  - Throw exceptions
+- Models
+  - Handle all interactions with the database
+  - Return raw data
+- Helpers
+  - Small independent functions
+  - Everything can use helpers
 
 ### Commented Code
 
