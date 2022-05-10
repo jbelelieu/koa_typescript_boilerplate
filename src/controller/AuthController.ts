@@ -1,6 +1,8 @@
 import * as Koa from 'koa';
 import { ThrowToRequestException } from '../exception/ThrowToRequestException';
+import { ThrowValidationException } from '../exception/ThrowValidationException';
 import { respond, respondError } from '../helper/http';
+import { validateInput } from '../helper/validate';
 import { IUser } from '../interface/model';
 import * as AuthService from '../service/AuthService';
 
@@ -12,6 +14,19 @@ import * as AuthService from '../service/AuthService';
  */
 export async function login(ctx: Koa.Context): Promise<void> {
     try {
+        // Input validation example...
+        // @link https://www.npmjs.com/package/node-input-validator#rules
+        // const validatationErrorsFound = await validateInput(
+        //     ctx.request.body,
+        //     {
+        //         "rule1": "required",
+        //         "rule2": "required"
+        //     }
+        // );
+        // if (validatationErrorsFound) {
+        //     throw new ThrowValidationException(validatationErrorsFound);
+        // }
+
         const keyHeader = ctx.get('x-api-key');
         if (!keyHeader) {
             throw new ThrowToRequestException('E0002', 401);

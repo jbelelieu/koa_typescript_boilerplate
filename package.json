@@ -43,6 +43,7 @@
     "koa-jwt": "^3.5.1",
     "koa-logger": "^3.2.0",
     "koa-ratelimit": "^4.2.1",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "node-input-validator": "^4.5.0"
   }
 }

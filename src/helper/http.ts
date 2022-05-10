@@ -2,6 +2,7 @@ import { Context } from 'koa';
 import { config } from '../config/config';
 import { ThrowToRedirectException } from '../exceptions/ThrowToRedirectException';
 import { ThrowToRequestException } from '../exceptions/ThrowToRequestException';
+import { ThrowValidationException } from '../exceptions/ThrowValidationException';
 import { translate } from './localization';
 
 /**
@@ -48,6 +49,10 @@ export function respond(koaContext: Context, message: any = null, httpStatus = 2
 export function respondError(ctx: Context, e: Error | ThrowToRequestException): void {
     if (e instanceof ThrowToRequestException) {
         respond(ctx, translate(e.message), e.httpCode);
+    }
+
+    else if (e instanceof ThrowValidationException) {
+        respond(ctx, e.message, 400);
     }
 
     else if (e instanceof ThrowToRedirectException) {
