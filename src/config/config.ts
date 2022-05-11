@@ -8,6 +8,7 @@ export const config = {
     APP_SECRET: getEnvVariable('APP_SECRET', 'YOU_REALLY_NEED_TO_CHANGE_THIS_AND_YOUR_.ENV_FILE!'),
     DEFAULT_LOCALE: getEnvVariable('DEFAULT_LOCALE', 'en'),
     NODE_ENV: getEnvVariable('NODE_ENV', 'local'),
+    PORT: getEnvVariable('PORT', '4000'),
 };
 
 /**

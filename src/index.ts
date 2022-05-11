@@ -3,6 +3,7 @@ import * as Koa from 'koa';
 import * as bodyParser from 'koa-bodyparser';
 import * as logger from 'koa-logger';
 import * as ratelimit from 'koa-ratelimit';
+import { config } from './config/config';
 import { publicRouter } from './router/publicRoutes';
 import { secureRouter } from './router/secureRoutes';
 import * as jwt from 'koa-jwt';
@@ -28,7 +29,7 @@ app.use(ratelimit({
 app.use(bodyParser());
 
 // Logging
-if (process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'production') {
+if (config.NODE_ENV !== 'test' && config.NODE_ENV !== 'production') {
 	app.use(logger());
 }
 
@@ -42,9 +43,9 @@ app.use(cors({
 app.use(publicRouter.routes()).use(publicRouter.allowedMethods());
 
 // TODO: JWT Security
-app.use(jwt({ secret: process.env.JWT_SECRET }));
+app.use(jwt({ secret: config.APP_JWT_SECRET }));
 
 app.use(secureRouter.routes()).use(secureRouter.allowedMethods());
 
 // Start the server
-export const server = app.listen(process.env.PORT || 4000);
+export const server = app.listen(config.PORT || 4000);
